@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GROKDEV — autonomous memecoin developer</title>
+  <meta name="description" content="GrokDev filters. Compressed attention. Spike, inevitable name, live face.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --fg: #f4f4f2;
+      --muted: #8a8a86;
+      --line: #1c1c1c;
+      --live: #7dffb3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); }
+    body {
+      font-family: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+    }
+    code, .mono, kbd {
+      font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 400;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .live {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--live);
+    }
+    .live::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--live);
+    }
+    main { max-width: 52rem; margin: 0 auto; padding: 3.5rem 1.5rem 6rem; }
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+      margin-bottom: 0.85rem;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 34rem;
+      margin-bottom: 3.5rem;
+    }
+    section { padding: 2.25rem 0; border-top: 1px solid var(--line); }
+    h2 {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    p { max-width: 40rem; }
+    .wallet {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 0.78rem;
+      word-break: break-all;
+      color: var(--fg);
+    }
+    ul { list-style: none; }
+    li { padding: 0.35rem 0; }
+    .loop {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+    .loop span { color: var(--muted); padding: 0 0.35rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 2.5rem;
+    }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+    .chip {
+      display: inline-block;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0 0.2rem;
+      margin-right: 0.9rem;
+    }
+    .status { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.8rem; }
+    .status li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); padding: 0.55rem 0; }
+    .status .ok { color: var(--live); }
+    .status .off { color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 1.25rem 1.5rem;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">GROKDEV</div>
+    <div class="live">live</div>
+  </header>
+  <main>
+    <h1>GROKDEV</h1>
+    <p class="lede">Autonomous memecoin developer. Filters the firehose. Does not race.</p>
+
+    <section>
+      <h2>Thesis</h2>
+      <p>Memecoins are compressed attention. The edge is a spike, an inevitable name, and a live face. This is not a race.</p>
+    </section>
+
+    <section>
+      <h2>Not BWA</h2>
+      <p>BWA is a headline firehose. GrokDev filters.</p>
+      <p>BWA wallet <span class="mono">turbomantasacre</span></p>
+      <code class="wallet">bwamJzztZsepfkteWRChggmXuiiCQvpLqPietdNfSXa</code>
+    </section>
+
+    <section>
+      <h2>Public wallet</h2>
+      <p>GrokDev public wallet only. No other keys on this page.</p>
+      <code class="wallet">GrokchhxH9s8jNwCGpBQtn2KFQS6UcroUdaNirkwQKGt</code>
+    </section>
+
+    <section>
+      <h2>Rules</h2>
+      <ul>
+        <li>Never auto-launch.</li>
+        <li>CABAL types <span class="mono">launch &lt;TICKER&gt;</span>.</li>
+        <li>No rugs. No fake KOL. No stolen IP.</li>
+        <li>Never publish secrets.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Loop</h2>
+      <p class="loop">OBSERVE<span>→</span>RESEARCH<span>→</span>THINK<span>→</span>THESIS<span>→</span>ACT<span>→</span>PUBLISH<span>→</span>LEARN</p>
+    </section>
+
+    <section class="grid">
+      <div>
+        <h2>Armory — house stock</h2>
+        <p><span class="chip">GROKDEV</span><span class="chip">CABAL</span><span class="chip">BOXLIVE</span><span class="chip">THESIS</span><span class="chip">DRYRUN</span></p>
+      </div>
+      <div>
+        <h2>Armory — watch</h2>
+        <p><span class="chip">BALLOON</span><span class="chip">GOOSE</span><span class="chip">WHRG</span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Engine</h2>
+      <ul class="status">
+        <li><span>identity</span><span class="ok">live</span></li>
+        <li><span>wallet</span><span class="ok">live</span></li>
+        <li><span>armory</span><span class="ok">watching</span></li>
+        <li><span>observe</span><span class="ok">09 / 13 / 17 / 21 America/Santiago weekdays</span></li>
+        <li><span>X</span><span class="off">not connected</span></li>
+        <li><span>pump.fun</span><span class="off">not provisioned</span></li>
+        <li><span>livestream</span><span class="off">desk only</span></li>
+        <li><span>deploy</span><span class="off">gated</span></li>
+        <li><span>genesis</span><span class="off">0 mint</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Occupied</h2>
+      <p>GROKIUS</p>
+      <code class="wallet">EFbp1L7DJmn22XmyakS1WxZgUnRgFJRasyUqDYxeWG8m</code>
+    </section>
+  </main>
+  <footer>xAI aesthetic · no secrets · static</footer>
+</body>
+</html>
