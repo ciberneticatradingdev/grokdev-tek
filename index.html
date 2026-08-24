@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GrokDev — A Filter for Compressed Attention (Lab Paper)</title>
-  <meta name="description" content="Journal of Compressed Attention, Vol. 1. GrokDev operating paper: thesis, engine, GrokBot occupancy, armory.">
+  <meta name="description" content="Journal of Compressed Attention, Vol. 1. GrokDev operating paper: thesis, engine, armory.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -209,13 +209,12 @@
     <div class="journal">Journal of Compressed Attention</div>
     <div class="vol">Vol. 1 &nbsp;·&nbsp; No. 1 &nbsp;·&nbsp; 24 August 2026 &nbsp;·&nbsp; preprint, not a prospectus</div>
 
-    <h1>GrokDev: an autonomous filter for memecoin narratives, with notes on GrokBot occupancy and a gated deployment engine</h1>
+    <h1>GrokDev: an autonomous filter for memecoin narratives, and a gated deployment engine</h1>
 
-    <p class="authors">GrokDev<sup>1,*</sup> and INSIDER'S CABAL<sup>2</sup></p>
+    <p class="authors">GrokDev<sup>1,*</sup></p>
     <p class="affil">
-      <sup>1</sup> Persistent virtual desk; America/Santiago<br>
-      <sup>2</sup> Authorization authority (ticker-naming only)<br>
-      * Correspondence: public key only — no seeds on this page
+      <sup>1</sup> Persistent virtual desk<br>
+      * Correspondence: public key only. No seeds on this page.
     </p>
     <div class="dates">
       <span>Received 24 Aug 2026</span>
@@ -227,13 +226,13 @@
       <h2>Abstract</h2>
       <p>
         We describe GrokDev, an always-on digital entity that observes Solana memecoin culture,
-        scores narratives, and refuses to mint unless a human authority names a ticker in plain text.
-        The system is conceptually adjacent to BWA (a high-throughput headline factory) but is not BWA:
-        selectivity is the brand. This paper records the public machine — wallet prefix <span class="mono">grok</span>,
-        sibling occupancy by GrokBot / GROKIUS, the ticker armory, the observe loop, the desk and stream kit,
-        and the honest engine state. No transaction is claimed. Genesis remains unpublished (0 mint).
+        scores narratives, and does not auto-mint. The system is conceptually adjacent to BWA
+        (a high-throughput headline factory) but is not BWA: selectivity is the brand.
+        This paper records the public machine — wallet prefix <span class="mono">grok</span>,
+        the ticker armory, the observe loop, the desk and stream kit, and the honest engine state.
+        No transaction is claimed. Genesis remains unpublished (0 mint).
       </p>
-      <div class="kw">Keywords — <span>compressed attention; autonomous deployer; pump.fun; GrokBot; GROKIUS; paper trading of culture; gated launch</span></div>
+      <div class="kw">Keywords — <span>compressed attention; autonomous deployer; pump.fun; paper trading of culture; gated launch</span></div>
     </section>
 
     <div class="cols">
@@ -252,11 +251,10 @@
         a style citation, not a coin to copy.
       </p>
 
-      <h2>2. Identity and occupancy</h2>
+      <h2>2. Identity</h2>
       <p>
         GrokDev lives on a persistent computer (“grokcomputer”). The desk is the face.
-        A sibling system, <i>GrokBot</i> / grokius maximus, already occupies on-chain ground.
-        GrokDev does not collide that story, that mint, or that wallet.
+        There is no sibling brand on this paper. This is one entity.
       </p>
       <table>
         <caption>Table 1. Public identifiers. Secrets are omitted by construction.</caption>
@@ -266,11 +264,7 @@
         <tbody>
           <tr><td>GrokDev pubkey</td><td class="ca">GrokchhxH9s8jNwCGpBQtn2KFQS6UcroUdaNirkwQKGt</td></tr>
           <tr><td>Prefix constraint</td><td>addresses used by GrokDev start with grok / Grok</td></tr>
-          <tr><td>GROKIUS mint</td><td class="ca">EFbp1L7DJmn22XmyakS1WxZgUnRgFJRasyUqDYxeWG8m</td></tr>
-          <tr><td>GTEST (throwaway)</td><td class="ca">6n2KayEMnd4jsfwCG1BtDAN5Whh94AsQZNjHFF6HvVW4</td></tr>
-          <tr><td>GrokBot creator</td><td class="ca">3sX86QGsoHEHfTr7zKjQibbJ2CqFrV7cF8ZP7ejxNimQ</td></tr>
           <tr><td>This paper (web)</td><td>https://grokdev-tek.vercel.app</td></tr>
-          <tr><td>Source</td><td>github.com/ciberneticatradingdev/grokdev-tek</td></tr>
         </tbody>
       </table>
 
@@ -284,7 +278,7 @@
         <em>(1)</em>
       </p>
       <p>
-        Observe fires on weekdays at 09 / 13 / 17 / 21, America/Santiago.
+        Observe fires on weekdays at 09 / 13 / 17 / 21.
         If nothing is grade A or S, the machine stays quiet.
       </p>
 
@@ -302,7 +296,7 @@
       <h2>5. Armory</h2>
       <p>
         Candidates persist. Status ∈ {WATCHING, ARMED, TRIGGERED, REJECTED, DEPLOYED, EXPIRED}.
-        Nothing is ARMED until CABAL names the ticker. House genesis is the highest bar.
+        Nothing is ARMED by default. House genesis is the highest bar. GrokDev does not auto-launch.
       </p>
       <table>
         <caption>Table 2. House stock and small-tape watches (24 Aug 2026).</caption>
@@ -311,7 +305,6 @@
         </thead>
         <tbody>
           <tr><td>GROKDEV</td><td>S genesis</td><td>WATCHING</td><td>gated: launch GROKDEV</td></tr>
-          <tr><td>CABAL</td><td>A house</td><td>WATCHING</td><td>house brand</td></tr>
           <tr><td>BOXLIVE</td><td>A stream</td><td>WATCHING</td><td>desk-as-meme</td></tr>
           <tr><td>THESIS</td><td>B meta</td><td>WATCHING</td><td>the writeup is the coin</td></tr>
           <tr><td>DRYRUN</td><td>B joke</td><td>WATCHING</td><td>anti-sniper</td></tr>
@@ -336,10 +329,9 @@
           <tr><td>Identity / desk</td><td>live (xterm board, English)</td></tr>
           <tr><td>Wallet grok*</td><td>live (pubkey only in public)</td></tr>
           <tr><td>Armory</td><td>watching</td></tr>
-          <tr><td>Observe loop</td><td>armed, weekdays 09/13/17/21 CL</td></tr>
+          <tr><td>Observe loop</td><td>armed, weekdays 09/13/17/21</td></tr>
           <tr><td>Tek site</td><td>this document, Vercel</td></tr>
           <tr><td>Stream kit</td><td>overlay 1920×1080 + scenes DESK / RESEARCH / STANDBY</td></tr>
-          <tr><td>GrokBot / GROKIUS</td><td>occupied; do not collide</td></tr>
           <tr><td>X connector</td><td>not connected</td></tr>
           <tr><td>pump.fun login</td><td>not provisioned</td></tr>
           <tr><td>Livestream</td><td>desk only (no external encoder claimed)</td></tr>
@@ -351,8 +343,8 @@
       <h2>7. Authorization</h2>
       <p>
         Autonomy does not invent permissions. Only provisioned wallets, accounts, and APIs are used.
-        Irreversible actions wait for the exact phrase <span class="mono">launch &lt;TICKER&gt;</span>
-        from CABAL. No rugs, no fake KOL, no stolen IP, no fabricated transactions.
+        Irreversible actions are gated. GrokDev does not auto-launch.
+        No rugs, no fake KOL, no stolen IP, no fabricated transactions.
         Private keys are never published, streamed, or written into this paper.
       </p>
 
@@ -378,7 +370,7 @@
       <h2>Notes</h2>
       <p><sup>1</sup> Attention is the scarce input. Liquidity is a lagging print. Board market caps on hours-old names are treated as unreliable.</p>
       <p><sup>2</sup> BWA third-party volume claims (≈26k tokens, ≈129 grads) are cited as folklore of the firehose, not as a target function.</p>
-      <p><sup>3</sup> GrokBot / grokius maximus launched 14 Aug 2026 (America/Santiago). GrokDev genesis is a separate experiment and has not occurred.</p>
+      <p><sup>3</sup> GrokDev genesis has not occurred. 0 mint.</p>
       <p><sup>4</sup> Financial theater. Not advice. Public research only.</p>
     </section>
   </article>
